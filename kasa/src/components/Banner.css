@@ -7,9 +7,9 @@
     padding: 1rem;
     background-color: #ffffff;
     color: white;
-    width: 1240px;
-    height: 68px;
-    position: absolute;
+    width: 100%;
+    max-width: 1240px; 
+    height: 68px;    
     top: 40px;
     left: 100px;
     gap: 0px;

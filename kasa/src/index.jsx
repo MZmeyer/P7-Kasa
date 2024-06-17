@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import FicheLogement from './FicheLogement'; 
-import APropos from './Apropos';
+import App from './pages/App';
+import FicheLogement from './pages/FicheLogement'; 
+import APropos from './pages/Apropos';
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom';
-import './App.css';
+import './pages/App.css';
  
 
 const router = createBrowserRouter([
