@@ -1,0 +1,16 @@
+.section {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    /*margin-top: 220px; */
+    width: 100%; 
+    max-width: 1240px; 
+    height: 223px;
+    background-image: url("/./public/backgroundapropos.jpeg"); 
+    background-size: cover; 
+    background-position: center;
+    border-radius: 25px 25px 25px 25px;
+  }
+  
+  

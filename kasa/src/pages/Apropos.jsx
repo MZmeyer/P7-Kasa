@@ -1,14 +1,15 @@
 import React from 'react';
 import Navbar from '../components/Banner';
 import Footer from '../components/Footer';
+import Section from '../components/SectionApropos';
+import Dropdown from '../components/Dropdown';
 
 function aPropos() {
   return (
     <div className="app-container">
       <Navbar />
-      <div className="content">
-        <p>En construction</p>
-      </div>
+      <Section />
+      <Dropdown />
       <Footer />      
     </div>
   );
