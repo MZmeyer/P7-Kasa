@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Gallery.css';
+import '../styles/Gallery.scss';
+import { Link } from 'react-router-dom';
 
 function Gallery() {
   const [logements, setLogements] = useState([]);
@@ -15,10 +16,10 @@ function Gallery() {
     <div className='gallery'>
       <div className='grid'>
         {logements.map((logement) => (
-          <div key={logement.id} className='grid-item'>
+          <Link key={logement.id} to={`/FicheLogement/${logement.id}`} className='grid-item'>
             <img src={logement.cover} alt={logement.title} />
             <p>{logement.title}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

@@ -1,3 +1,4 @@
+@import '../styles/_variables';
 .gallery {    
     display: flex;
     justify-content: center;
@@ -25,8 +26,8 @@
     border-radius: 25px;
     overflow: hidden;
     text-align: center;
-    background: #FF6060;
-    background: linear-gradient(180deg,#FF6060 90%, rgb(78, 76, 76) 100%);
+    background: $primary-color;
+    background: linear-gradient(180deg,$primary-color 90%, rgb(78, 76, 76) 100%);
 
   }
   
@@ -42,7 +43,7 @@
     font-weight: 500;
     line-height: 15px;
     text-align: left;
-    color: #ffffff;
+    color: $secondary-color;
     padding: 20px;
   }
   .grid-item:hover {

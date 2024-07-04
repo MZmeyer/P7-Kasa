@@ -1,24 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.scss';
 import App from './pages/App';
 import FicheLogement from './pages/FicheLogement'; 
+import Erreur404 from './pages/Erreur404';
 import APropos from './pages/Apropos';
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom';
-import './pages/App.css';
+import './styles/App.scss';
  
 
 const router = createBrowserRouter([
+  
   {
+    errorElement:<Erreur404 />,
     path: '/',
     element: <App />,
   },
   {
-    path: '/FicheLogement',
+    path: '/FicheLogement/:logementId',
     element: <FicheLogement />,
   },
   {

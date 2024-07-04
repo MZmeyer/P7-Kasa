@@ -1,0 +1,80 @@
+@import '../styles/_variables';
+
+.logement-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.logement-main-info {
+  flex: 1;
+}
+
+.logement-title, .logement-location {
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: $primary-color;
+  margin-bottom: 10px;
+}
+
+.logement-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: $primary-color;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+}
+
+.logement-host {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.host-picture {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.host-name {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: $primary-color;
+}
+
+.logement-rating {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.star {
+  font-size: 24px;
+  color: #ddd;
+}
+
+.star.filled {
+  color: $primary-color;
+}
+
+.logement-side-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  margin-left: 20px;
+}

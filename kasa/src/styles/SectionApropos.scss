@@ -1,4 +1,6 @@
-.section {  
+@import '../styles/_variables';
+
+.sectionApropos {  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,19 +9,10 @@
     width: 100%; 
     max-width: 1240px; 
     height: 223px;
-    background-image: url("/./public/galleryback.jpg"); 
+    background-image: url(#{$backgroundimg2}); 
     background-size: cover; 
     background-position: center;
     border-radius: 25px 25px 25px 25px;
   }
   
-  .section h2 {
-    width: 705px;
-    height: 68px;  
-    font-family: Montserrat, sans-serif;
-    font-size: 48px;
-    font-weight: 500;
-    line-height: 68.45px;
-    text-align: center;
-    color: white;  
-  }
+  

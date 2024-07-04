@@ -1,13 +1,13 @@
 import React from 'react';
-import './SectionApropos.css';
+import '../styles/SectionApropos.scss';
 
 
-function Section() {
+function SectionApropos() {
   return (
-    <div className="section">        
+    <div className="sectionApropos">        
                 
       </div>
   );
 }
 
-export default Section;
+export default SectionApropos;

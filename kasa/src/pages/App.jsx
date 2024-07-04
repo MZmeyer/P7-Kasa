@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../styles/App.scss';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
@@ -10,8 +10,7 @@ function App() {
     <div className="app-container">
       <Banner />    
       <Section />
-      <Gallery />
-      <p>En construction</p> 
+      <Gallery />      
       <Footer />   
     </div>
   );

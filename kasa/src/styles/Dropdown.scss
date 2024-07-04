@@ -1,9 +1,9 @@
 
-
+@import '../styles/_variables';
 .dropdown-container {
     display: flex;
     flex-direction: column;
-    gap: 10px; 
+    gap: 40px; 
     width: 100%;
     max-width: 1023px;
     margin-top: 60px;
@@ -18,7 +18,7 @@
   
   .dropdown-header {
     padding: 10px;
-    background-color:  #FF6060;
+    background-color:  $primary-color;
     cursor: pointer;    
     color: white;
     font-family: Montserrat, sans-serif;
@@ -32,14 +32,14 @@
     transition: max-height 0.3s ease-out;
     padding: 0 10px;
     background-color:#F6F6F6;
-    color: #FF6060;
+    color: $primary-color;
     font-family: Montserrat, sans-serif;
     font-size: 24px;
     font-weight: 400;
   }
   
   .dropdown-content.show {
-    max-height: 100px;
+    max-height:fit-content;
     padding: 10px;
   }
   
