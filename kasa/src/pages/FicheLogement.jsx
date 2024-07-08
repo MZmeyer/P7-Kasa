@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import Slideshow from '../components/Slideshow';
-import DropdownFL from '../components/DropdownFL';
+import CollapseFL from '../components/CollapseFL';
 import Title from '../components/Title';
 import '../styles/Slideshow.scss'
 import '../styles/App.scss';
@@ -15,7 +15,7 @@ function FicheLogement() {
       <Banner/>
       <Slideshow/>
       <Title/>
-      <DropdownFL/>
+      <CollapseFL/>
       <Footer/>
     </div>
   );

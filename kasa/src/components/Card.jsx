@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Gallery.scss';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 function Gallery() {
   const [logements, setLogements] = useState([]);
+  const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
     fetch('/logements.json')
       .then(res => res.json())
       .then(data => setLogements(data))
-      .catch(error => console.error('Error fetching data:', error));
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        setRedirect(true); 
+      });
   }, []);
+
+  if (redirect) {
+    return <Navigate to="/error" />;
+  }
 
   return (
     <div className='gallery'>

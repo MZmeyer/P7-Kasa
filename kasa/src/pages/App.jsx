@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/App.scss';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
-import Gallery from '../components/Gallery';
+import Card from '../components/Card';
 import Section from '../components/Section';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="app-container">
       <Banner />    
       <Section />
-      <Gallery />      
+      <Card />      
       <Footer />   
     </div>
   );

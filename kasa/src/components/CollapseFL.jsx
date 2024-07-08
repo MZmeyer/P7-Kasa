@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import Title from './Title';
 import '../styles/DropdownFL.scss';
 
 function DropdownFL() {
   const { logementId } = useParams();
   const [logement, setLogement] = useState(null);
+  const [redirect, setRedirect] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState([false, false]);
 
   useEffect(() => {
@@ -13,9 +14,16 @@ function DropdownFL() {
       .then(res => res.json())
       .then(data => {
         const logementData = data.find(item => item.id === logementId);
-        setLogement(logementData);
+        if (!logementData) {
+          setRedirect(true);
+        } else {
+          setLogement(logementData);
+        }
       })
-      .catch(error => console.error('Error loading JSON data:', error));
+      .catch(error => {
+        console.error('Error loading JSON data:', error);
+        setRedirect(true); 
+      });
   }, [logementId]);
 
   const toggleDropdown = (index) => {
@@ -24,6 +32,10 @@ function DropdownFL() {
       return newOpenDropdowns;
     });
   };
+
+  if (redirect) {
+    return <Navigate to="/error" />;
+  }
 
   if (!logement) return <div>Loading...</div>;
 

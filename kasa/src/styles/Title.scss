@@ -1,4 +1,7 @@
 @import '../styles/_variables';
+.logement-details {
+  width:100%
+}
 
 .logement-info {
   display: flex;
@@ -6,41 +9,78 @@
   align-items: flex-start;
   margin-bottom: 20px;
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .logement-main-info {
   flex: 1;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
-.logement-title, .logement-location {
+.logement-title {
   font-family: Montserrat, sans-serif;
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 500;
   color: $primary-color;
   margin-bottom: 10px;
+  margin-top: -20px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.logement-location {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: $primary-color;
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 }
 
 .logement-tags {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 10px;
+  padding-top: 20px;
+  gap: 10px;
 }
 
 .tag {
   background-color: $primary-color;
-  color: white;
+  color: $secondary-color;
   padding: 5px 10px;
-  border-radius: 3px;
+  border-radius: 15px;
   margin-right: 5px;
   margin-bottom: 5px;
   font-family: Montserrat, sans-serif;
   font-size: 14px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 }
 
 .logement-host {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  flex-direction:row-reverse;
+  gap: 5px;
+  @media (max-width: 768px) {
+    flex-direction: row-reverse;
+  }
 }
 
 .host-picture {
@@ -48,6 +88,11 @@
   width: 40px;
   height: 40px;
   margin-right: 10px;
+
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .host-name {
@@ -55,16 +100,27 @@
   font-size: 18px;
   font-weight: 500;
   color: $primary-color;
+  width: 50%;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 .logement-rating {
   display: flex;
   margin-bottom: 10px;
+  margin-top: 20px;
+  gap: 10px;
 }
 
 .star {
-  font-size: 24px;
+  font-size: 36px;
   color: #ddd;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 }
 
 .star.filled {
@@ -77,4 +133,13 @@
   align-items: flex-end;
   flex-shrink: 0;
   margin-left: 20px;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 20px;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: row-reverse;
+  }
 }

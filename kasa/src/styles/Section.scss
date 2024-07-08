@@ -1,4 +1,5 @@
 @import '../styles/_variables';
+
 .section {
   display: flex;
   flex-direction: column;
@@ -29,16 +30,51 @@
       position: relative;
       z-index: 2;
   }
+
+  @media (max-width: 768px) {
+      height: 180px;
+      border-radius: 20px;
+
+      h2 {
+          width: 90%;
+          font-size: 36px;
+          line-height: 50px;
+      }
+  }
+
+  @media (max-width: 480px) {
+      height: 150px;
+      border-radius: 15px;
+
+      h2 {
+          width: 90%;
+          font-size: 24px;
+          line-height: 36px;
+      }
+  }
 }
 
-  
-  .section h2 {
-    width: 705px;
-    height: 68px;  
-    font-family: Montserrat, sans-serif;
-    font-size: 48px;
-    font-weight: 500;
-    line-height: 68.45px;
-    text-align: center;
-    color: white;  
+.section h2 {
+  width: 705px;
+  height: 68px;  
+  font-family: Montserrat, sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 68.45px;
+  text-align: center;
+  color: $secondary-color;  
+
+  @media (max-width: 768px) {
+    width: 69%;
+    font-size: 36px;    
+    line-height: normal;  
+    text-align: left;      
   }
+
+  @media (max-width: 480px) {
+      width: 69%;
+      font-size: 24px;    
+      line-height: normal;  
+      text-align: left;
+  }
+}

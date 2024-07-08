@@ -1,4 +1,6 @@
 @import '../styles/_variables';
+
+
 .gallery {    
     display: flex;
     justify-content: center;
@@ -10,43 +12,82 @@
     border-radius: 25px;
     background-color: #F6F6F6;
     overflow: hidden; 
-  }
-  
-  .grid {
+    @media (max-width: 480px) {
+        margin-top: 20px;    
+    }
+}
+
+
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     gap: 40px;
     width: 100%;
     padding: 40px;
-  }
-  
-  .grid-item {
-    height: 400px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+
+.grid-item {
+    position: relative; 
+    height: 300px;
     border: 2px solid #ddd;
     border-radius: 25px;
     overflow: hidden;
-    text-align: center;
-    background: $primary-color;
-    background: linear-gradient(180deg,$primary-color 90%, rgb(78, 76, 76) 100%);
+    text-align: center;    
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out; 
 
-  }
-  
-  .grid-item img {
+    @media (max-width: 768px) {
+        height: 300px;
+    }
+
+    @media (max-width: 480px) {
+        height: 250px;
+    }
+}
+
+
+.grid-item img {
     width: 100%;
-    height: 80%;
+    height: 100%;
     display: block;
-  }
-  
-  .grid-item p {
-    font-family: Montserrat;
+    object-fit: cover; 
+}
+
+
+.grid-item p {
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    right: 0;    
+    color:$secondary-color; 
+    padding: 10px 20px; 
+    margin: 0; 
+    font-family: Montserrat, sans-serif; 
     font-size: 18px;
     font-weight: 500;
-    line-height: 15px;
+    line-height: 1.5;
     text-align: left;
-    color: $secondary-color;
-    padding: 20px;
-  }
-  .grid-item:hover {
+
+    @media (max-width: 768px) {
+        font-size: 16px;
+        padding: 7px 15px; 
+    }
+}
+
+
+.grid-item:hover {
     transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-  }
+}

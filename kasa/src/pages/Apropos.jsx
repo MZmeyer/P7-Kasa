@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import SectionApropos from '../components/SectionApropos';
-import Dropdown from '../components/Dropdown';
+import Collapse from '../components/Collapse';
 import '../styles/App.scss';
 import '../styles/SectionApropos.scss'
 
@@ -11,7 +11,7 @@ function aPropos() {
     <div className="app-container">
       <Banner />
       <SectionApropos />
-      <Dropdown />
+      <Collapse />
       <Footer />      
     </div>
   );
