@@ -50,7 +50,10 @@ function DropdownFL() {
       />
       <div className="dropdown-container-fl">
         <div className="dropdown-fl">
-          <div className="dropdown-header-fl" onClick={() => toggleDropdown(0)}>
+          <div 
+            className={`dropdown-header-fl ${openDropdowns[0] ? 'active' : ''}`} 
+            onClick={() => toggleDropdown(0)}
+          >
             Description
           </div>
           <div className={`dropdown-content-fl ${openDropdowns[0] ? 'show' : ''}`}>
@@ -58,7 +61,10 @@ function DropdownFL() {
           </div>
         </div>
         <div className="dropdown-fl">
-          <div className="dropdown-header-fl" onClick={() => toggleDropdown(1)}>
+          <div 
+            className={`dropdown-header-fl ${openDropdowns[1] ? 'active' : ''}`} 
+            onClick={() => toggleDropdown(1)}
+          >
             Équipements
           </div>
           <div className={`dropdown-content-fl ${openDropdowns[1] ? 'show' : ''}`}>
