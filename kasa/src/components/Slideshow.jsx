@@ -27,19 +27,31 @@ function Slideshow() {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length);
   };
 
-  if (pictures.length === 0) return null; 
+  if (pictures.length === 0) return null;
+
+  const showControls = pictures.length > 1; 
+
   return (
     <div className="slideshow">
-      {pictures.map((picture, index) => (
-        <div
-          className={`slideshow-item ${index === currentIndex ? 'active' : ''}`}
-          key={index}
-        >
-          <img src={picture} alt={`Slide ${index}`} />
-        </div>
-      ))}
-      <button className="prev" onClick={prevSlide}>❮</button>
-      <button className="next" onClick={nextSlide}>❯</button>
+      <div className="slideshow-items">
+        {pictures.map((picture, index) => (
+          <div
+            className={`slideshow-item ${index === currentIndex ? 'active' : ''}`}
+            key={index}
+          >
+            <img src={picture} alt={`Slide ${index}`} />
+            {showControls && (
+              <div className="picture-number">{`${index + 1}/${pictures.length}`}</div>
+            )}
+          </div>
+        ))}
+      </div>
+      {showControls && (
+        <>
+          <button className="prev" onClick={prevSlide}>❮</button>
+          <button className="next" onClick={nextSlide}>❯</button>
+        </>
+      )}
     </div>
   );
 }
